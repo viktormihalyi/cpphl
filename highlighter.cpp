@@ -53,12 +53,12 @@ void remove_nested(std::vector<Match> & matches) {
     ), std::end(matches));
 }
 
-std::string SyntaxHighlighter::highlight(std::string input_code, RENDERER_TYPE renderer) const {
+std::string SyntaxHighlighter::highlight(std::string const & input_code, RENDERER_TYPE renderer) const {
     std::vector<Match> all_matches;
 
     for (auto const & reg : brush.get_regex_list()) {
         // find all matches on a single selector
-        std::vector<Match> res = RegexWrapper{reg.regex}.executeOn(input_code);
+        std::vector<Match> res = RegexWrapper{reg.regex}.execute_on(input_code);
 
         // copy coloring methods
         for (auto & m : res) {

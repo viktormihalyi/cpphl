@@ -1,5 +1,5 @@
-#ifndef STRNGUTILS_H_
-#define STRNGUTILS_H_
+#ifndef STRINGUTILS_H_
+#define STRINGUTILS_H_
 
 #include <string>
 #include <vector>

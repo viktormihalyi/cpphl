@@ -11,7 +11,7 @@ class SyntaxHighlighter {
     CppBrush brush;
 
 public:
-    std::string highlight(std::string input_code, RENDERER_TYPE renderer) const;
+    std::string highlight(std::string const & input_code, RENDERER_TYPE renderer) const;
 };
 
 #endif

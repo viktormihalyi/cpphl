@@ -46,7 +46,7 @@ int main(int argc, char* argv[]) {
             renderer = HTML;
 
         } else {
-            if (source_code.size() > 0) {
+            if (!source_code.empty()) {
                 std::cerr << "bad arguments" << std::endl;
                 return EXIT_FAILURE;
             }
@@ -60,7 +60,7 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    if (source_code.size() == 0) {
+    if (source_code.empty()) {
         std::cerr << "no source code file defined" << std::endl;
         return EXIT_FAILURE;
     }

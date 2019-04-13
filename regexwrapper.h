@@ -23,7 +23,7 @@ class RegexWrapper {
 
 public:
     RegexWrapper(std::string expression);
-    std::vector<Match> executeOn(std::string input);
+    std::vector<Match> execute_on(std::string input);
 };
 
 #endif

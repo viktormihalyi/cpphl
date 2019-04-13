@@ -47,7 +47,7 @@ RegexWrapper::RegexWrapper(std::string exp) {
     regex = std::regex{regex_repair(exp)};
 }
 
-std::vector<Match> RegexWrapper::executeOn(std::string input) {
+std::vector<Match> RegexWrapper::execute_on(std::string input) {
     std::vector<Match> result;
 
     // this is the current starting position in the original string
@@ -64,7 +64,7 @@ std::vector<Match> RegexWrapper::executeOn(std::string input) {
         // add match to results
         int from = at + match_pos;
         int to = from + matched_string.size() - 1;
-        result.push_back(Match{from, to, matched_string});
+        result.emplace_back(Match{from, to, matched_string});
 
         // get the whole match
         int full_match_pos = match.position(0);
